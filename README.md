@@ -40,7 +40,7 @@ A three-part walkthrough for deploying an ELK (Elasticsearch, Logstash, Kibana) 
 
 Create a new vNet located in the same resource group you have been using.
 
-	- Make sure this vNet is located in a _new_ region and not the same region as your other VM's.
+	- If you did the pre-req, make sure this vNet is located in a _new_ region and not the same region as your other VM's.
 
    ![](Step-By-Step-Guide/Part%201/Resources/vNet-images/vNet.png)
 
