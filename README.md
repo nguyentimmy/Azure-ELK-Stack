@@ -2,8 +2,9 @@
 
 ## 🎯 Project Overview
 A three-part walkthrough for deploying an ELK (Elasticsearch, Logstash, Kibana) monitoring stack on Microsoft Azure using Ansible, then using Kibana to hunt through logs and metrics. Built as a purple-team lab: stand up the monitoring, generate attacker activity, and verify the stack detects it.
-> Here is a optional pre-requisite, full walk through on setting up two "DVWA" servers using the recommended security settings. If you want a full purple team lab, I do highly recommend going through this guide below. This will provide real time monitoring on those "DVWA" servers.
-➡️ [Azure Cloud Security Walkthrough](https://github.com/nguyentimmy/Azure-Virtualization-Security/blob/main/README.md)
+> Here is a optional pre-requisite: 🔗 [Azure Cloud Security Walkthrough](https://github.com/nguyentimmy/Azure-Virtualization-Security/blob/main/README.md), full walk through on setting up two "DVWA" servers using the recommended security settings. If you want a full purple team lab, I do highly recommend going through this guide below. This will provide real time monitoring on those "DVWA" servers.
+
+⚠️ If you choose to skip the pre-requisite, you can skip on VNET Peering part. No worries, I will have a warning sign on that part to give you a heads up.
 
 **Stack:** Microsoft Azure · Ansible · Docker · ELK (sebp/elk) · Filebeat · Metricbeat · Kibana
 
@@ -56,6 +57,8 @@ Here we are adding it to the `(US) West US` region because all the other resourc
   - Notice, in this example, that the IP Addressing has automatically created a new network space of `10.2.0.0/16`. If your network is different (10.1.0.0 or 10.3.0.0) it is ok as long as you accept the default settings. Azure automatically creates a network that will work.
 
    ![](Step-By-Step-Guide/Part%201/Resources/vNet-images/vNet-Final.png)
+
+⚠️ **If you did NOT do the pre-req, you can skip the VNET peering option.**
 
 - Create a Peer connection between your vNets. This will allow traffic to pass between your vNets and regions. This peer connection will make both a connection from your first vNet to your Second vNet _And_ a reverse connection from your second vNet back to your first vNet. This will allow traffic to pass in both directions.
 
