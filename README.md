@@ -11,7 +11,6 @@
 | **Resource Group** | Logical container holding every resource for the lab | Keeps all lab assets grouped for isolation and easy teardown |
 | **Virtual Network — RedTeam VNet** | Original private network hosting the jump box and DVWA web servers | Internal-only address space; foundation for network segmentation |
 | **Virtual Network — ELK VNet** | Separate VNet in a different region hosting the ELK monitoring server | Isolates monitoring infrastructure from the workload network |
-| **VNet Peering** *(Elk-to-Red / Red-to-Elk)* | Bidirectional connection allowing traffic between the two VNets/regions | Scoped peering — only the two lab VNets can route to each other |
 | **Network Security Group (NSG)** | Firewall controlling inbound/outbound traffic to the VMs | Default-deny baseline with explicit allow-rules layered above |
 | **ELK VM** *(Monitoring, 4GB+ RAM)* | Runs the Elastic Stack container; collects logs + metrics | Public IP restricted so only the admin IP reaches Kibana on port 5601 |
 | **Ansible container** (`cyberxsecurity/ansible`) | Infrastructure-as-code tool that configures the ELK + web VMs | Provisions consistently via playbook; dedicated SSH key; scoped `remote_user` |
