@@ -6,8 +6,6 @@ A three-part walkthrough for deploying an ELK (Elasticsearch, Logstash, Kibana) 
 
 ⚠️ If you choose to skip the pre-requisite, you can skip on VNET Peering part. No worries, I will have a warning sign on that part to give you a heads up.
 
-**Stack:** Microsoft Azure · Ansible · Docker · ELK (sebp/elk) · Filebeat · Metricbeat · Kibana
-
 ## 🧰 Azure Resources, Settings & Security Measures
 
 | Resource / Setting | Function | Security Measures Applied |
@@ -19,6 +17,8 @@ A three-part walkthrough for deploying an ELK (Elasticsearch, Logstash, Kibana) 
 | **ELK VM** *(Monitoring, 4GB+ RAM)* | Runs the Elastic Stack container; collects logs + metrics | Public IP restricted so only the admin IP reaches Kibana on port 5601 |
 | **Ansible container** (`cyberxsecurity/ansible`) | Infrastructure-as-code tool that configures the ELK + web VMs | Provisions consistently via playbook; dedicated SSH key; scoped `remote_user` |
 | **Load Balancer** | Distributes inbound web traffic across DVWA 1 & DVWA 2 | Restricts inbound access; health probe monitors backend availability |
+
+**Stack:** Microsoft Azure · Ansible · Docker · ELK (sebp/elk) · Filebeat · Metricbeat · Kibana
 
 ---
 
@@ -58,7 +58,7 @@ Here we are adding it to the `(US) West US` region because all the other resourc
 
    ![](Step-By-Step-Guide/Part%201/Resources/vNet-images/vNet-Final.png)
 
-⚠️ **If you did NOT do the pre-req, you can skip the VNET peering option.**
+⚠️ **If you did NOT do the 🔗 [Pre-Req](https://github.com/nguyentimmy/Azure-Virtualization-Security/blob/main/README.md), you can skip the VNET peering option.**
 
 - Create a Peer connection between your vNets. This will allow traffic to pass between your vNets and regions. This peer connection will make both a connection from your first vNet to your Second vNet _And_ a reverse connection from your second vNet back to your first vNet. This will allow traffic to pass in both directions.
 
