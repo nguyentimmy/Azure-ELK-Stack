@@ -58,7 +58,9 @@ Here we are adding it to the `(US) West US` region because all the other resourc
 
    ![](Step-By-Step-Guide/Part%201/Resources/vNet-images/vNet-Final.png)
 
-⚠️ **If you did NOT do the 🔗 [Pre-Req](https://github.com/nguyentimmy/Azure-Virtualization-Security/blob/main/README.md), you can skip the VNET peering option.**
+## 🌐 Step 1A — Create a Peer VNet Connection
+
+⚠️ **If you did NOT do the optional Pre-Req🔗[Azure Cloud Walkthrough](https://github.com/nguyentimmy/Azure-Virtualization-Security/blob/main/README.md), you can skip the VNET peering option.**
 
 - Create a Peer connection between your vNets. This will allow traffic to pass between your vNets and regions. This peer connection will make both a connection from your first vNet to your Second vNet _And_ a reverse connection from your second vNet back to your first vNet. This will allow traffic to pass in both directions.
 
