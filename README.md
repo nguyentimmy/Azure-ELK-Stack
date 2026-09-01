@@ -4,7 +4,7 @@
 A three-part walkthrough for deploying an ELK (Elasticsearch, Logstash, Kibana) monitoring stack on Microsoft Azure using Ansible, then using Kibana to hunt through logs and metrics. Built as a purple-team lab: stand up the monitoring, generate attacker activity, and verify the stack detects it.
 > Here is a optional pre-requisite: 🔗 [Azure Cloud Security Walkthrough](https://github.com/nguyentimmy/Azure-Virtualization-Security/blob/main/README.md), full walk through on setting up two "DVWA" servers using the recommended security settings. If you want a full purple team lab, I do highly recommend going through this guide below. This will provide real time monitoring on those "DVWA" servers.
 
-⚠️ If you choose to skip the pre-requisite, you can skip on VNET Peering part. No worries, I will have a warning sign on that part to give you a heads up.
+⚠️ If you choose to skip the pre-requisite, you can **SKIP on VNET Peering connection on Step 1A**.
 
 ## 🧰 Azure Resources, Settings & Security Measures
 
