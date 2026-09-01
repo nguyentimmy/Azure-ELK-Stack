@@ -38,15 +38,11 @@ A three-part walkthrough for deploying an ELK (Elasticsearch, Logstash, Kibana) 
 ---
 ## 🌐 Step 1 — Create a New VNet
 
-Make sure that you are logged into your personal Azure account, where your cloud security unit VMs are located.
-
-- Create a new vNet located in the same resource group you have been using.
+Create a new vNet located in the same resource group you have been using.
 
 	- Make sure this vNet is located in a _new_ region and not the same region as your other VM's.
 
    ![](Step-By-Step-Guide/Part%201/Resources/vNet-images/vNet.png)
-
-Here we are adding it to the `(US) West US` region because all the other resources are in the `(US) East US` region. 
 
   - Note that _which_ region you select is not important as long as it's a different US region than your other resources.
 
