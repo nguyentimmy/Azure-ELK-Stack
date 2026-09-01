@@ -40,7 +40,8 @@ A three-part walkthrough for deploying an ELK (Elasticsearch, Logstash, Kibana) 
 
 Create a new vNet located in the same resource group you have been using.
 
-	- If you did the OPTIONAL pre-req, make sure this vNet is located in a _new_ region and not the same region as your other VM's: :link: [Pre-Req](https://github.com/nguyentimmy/Azure-Virtualization-Security/blob/main/README.md)
+> If you did the OPTIONAL pre-req, make sure this vNet is located in a _new_ region and not the same region as your other VM's
+> 🔗 [Pre-Req](https://github.com/nguyentimmy/Azure-Virtualization-Security/blob/main/README.md)
 
    ![](Step-By-Step-Guide/Part%201/Resources/vNet-images/vNet.png)
 
